@@ -2,25 +2,32 @@
 <html>
     <head>
         <title>Calculadora de Hidratación Basal</title>
+        <link rel="stylesheet" href="./style.css" />
+        <script src="script.js" defer></script>
         <meta charset="UTF-8">
     </head>
     <body>
-        <div>
-            <div>
-                <h1>Calculadora de Hidratación Basal</h1>
-                <input type="number" placeholder="Ingrese el peso en kg"/>
-                <p>* Debe completar todos los datos</p>
-                <button>Calcular</button>
-                <p>71cc/h</p>
-                <p>m+m/2 : 105cc/h</p>
+        <div id="contenedor">
+            <div id="calculadora">
+                <div class="contenido">
+                    <h1>Calculadora de Hidratación Basal</h1>
+                    <p class="item">Completa todos los datos</p>
+                    <input class="item" id="peso" type="number" placeholder="Ingrese el peso en kg"/>
+                    <p class="item" id="error">* Debe completar todos los datos</p>
+                    <button class="item" id="calcular">Calcular</button>
+                    <p class="item resultado" id="flu">71cc/h</p>
+                    <p class="item resultado" id="man">m+m/2 : 105cc/h</p>
+                </div>
             </div>
-            <div>
-                <h1>¿Cómo se calcula?</h1>
-                <ul>
-                    <li>De 0kg hasta 10kg, se multiplica 100cc por cada kg.</li>
-                    <li>Mayor a 10kg hasta 20kg, se multiplica 50cc por cada kg.</li>
-                    <li>Mayor a 20kg hasta 30kg, se multiplica 20cc por cada kg.</li>
-                </ul>
+            <div id="detalle">
+                <div class="contenido">
+                    <h1>¿Cómo se calcula?</h1>
+                    <ul>
+                        <li>De 0kg hasta 10kg, se multiplica 100cc por cada kg.</li>
+                        <li>Mayor a 10kg hasta 20kg, se multiplica 50cc por cada kg.</li>
+                        <li>Mayor a 20kg hasta 30kg, se multiplica 20cc por cada kg.</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </body>
