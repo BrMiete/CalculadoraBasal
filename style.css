@@ -1,75 +1,114 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 
 body{
-    background: #f6f5f7;
-    font-family: 'Montserrat', sans-serif;
-    color: #3E363F;
+    background: #D9E9FF;                    /*Color de fondo*/
+    font-family: 'Montserrat', sans-serif;    /*Fuente del texto*/
+    color: #060606;                         /*Color del texto*/
 }
 #contenedor{
-    width: 900px;
-    height: 500px;
-    text-align: center;
-    /* Estas 3 lineas se encargan de centrar el div vertical y horizontalmente */
+    background: #FFFFFF;
+    width: 1100px;                  /*Ancho del contenido*/
+    height: 500px;                  /*Alto del contenido*/
+    text-align: center;             /*Para alinear el texto*/
+    /* Estas 3 líneas se encargan de centrar el div vertical y horizontalmente */
     position: absolute;
     inset: 0;
-    margin: auto;
+    margin: auto;                   /*Espacio entre elementos*/
     border-radius: 10px;
+    border: 1px solid #060606;
     overflow: hidden;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 #calculadora{
-    background: white;
-    /* Con estas 3 lineas vamos a hacer que los divs queden lado a lado */
-    width: 50%;
+    /* background: #D5FFEA; */
+    /* Con estas 3 líneas vamos a hacer que los divs queden lado a lado */
+    width: 520px;
     height: 100%;
     float: left;
+    color: black;
 }
 #detalle{
-    background: #FF416C;
-    /* Con estas 3 lineas vamos a hacer que los divs queden lado a lado */
-    width: 50%;
+    background: #387eff;
+    border-radius: 10px;
+    border-left: 1px solid #060606;
+    /* Con estas 3 líneas vamos a hacer que los divs queden lado a lado */
+    width: 579px;
     height: 100%;
-    float: left;
-    color: #f6f5f7;
+    float: left;        /*Desde donde empieza a contar el tamaño*/
+    color: black;
 }
 .contenido{
-    /* Estas tres lineas van a centrar el contenido verticalmente dentro de cada div */
+    /* Estas 3 líneas van a centrar el contenido verticalmente dentro de cada div */
     position: relative;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-50%);    /*Sube o baja el contenido en la vertical*/
     overflow: hidden;
-    padding: 40px;
+    padding: 40px;                  /*Tamaño del espacio que ocupa el contenido Alto x Ancho*/
 }
 input {
-	width: 70%;
+	/*text-align: center;*/
+    font-weight: bold;
+    width: 70%;
     padding: 12px 15px;
-    border: none;
-    background-color: #eee;
+    border: 1px solid #060606;    /*Para colocar un borde alrededor del texto*/
+    background-color: #8ec2ff;
 }
 button {
-  font-size: 15px;
+    font-size: 15px;                        /*Tamaño de la fuente en el botón. Aumenta o disminuye TODO en el botón*/
 	font-weight: bold;
-	padding: 12px 45px;
+	padding: 12px 25px;                     /*Relleno entre el contenido y el borde Alto x Ancho*/
 	border-radius: 30px;
-	background-color: #FF416C;
-	border: 1px solid #FF416C;
-	color: #FFFFFF;
-	text-transform: uppercase;
-	letter-spacing: 1px;
+	background-color: #387eff;            /*Color de fondo del botón*/
+	border: 1px solid #060606;            /*Grosor, Estilo y Color del borde del botón*/
+	color: #060606;                       /*Color del texto del botón*/
+	text-transform: uppercase;              /*Coloca el texto en mayúsculas*/
+	letter-spacing: 1px;                    /*Espacio entre letras del texto en el botón*/
 	transition: transform 20ms ease-in;
 }
 button:active {
-	transform: scale(0.95);
+	transform: scale(0.95);     /*Aumenta o disminuye el tamaño del botón al hacer clic*/
 }
-#error{
+#error1{
     color: red;
     font-weight: bold;
     display: none;
 }
-.resultado{
-    color: #0A81D1;
+#error2{
+    color: red;
     font-weight: bold;
-    font-size: 25px;
-    margin-bottom: 5px;
     display: none;
+}
+#calcular {
+    margin-top: 10px;           /*Espacio entre el botón y el elemento encima (top) del mismo*/
+}
+#contenedor-resultado {
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+}
+#resultado-texto {
+    position: relative;
+    text-align: right;
+    float: left;
+    align-self: end;
+}
+#resultado-numero1 {
+    position: relative;
+    text-align: left;
+    float: left;
+}
+#resultado-numero2 {
+    position: relative;
+    text-align: left;
+    float: left;
+}
+.resultado {
+    color: #142157;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 5px;
+    display: none;          /*none oculta el objeto y block muestra el objeto*/
+}
+.lista {
+    text-align: left;
 }

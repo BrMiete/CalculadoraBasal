@@ -11,22 +11,58 @@
             <div id="calculadora">
                 <div class="contenido">
                     <h1>Calculadora de Hidratación Basal</h1>
-                    <p class="item">Completa todos los datos</p>
+                    <p class="item">Complete el cuadro de abajo con el peso del paciente</p>
                     <input class="item" id="peso" type="number" placeholder="Ingrese el peso en kg"/>
-                    <p class="item" id="error">* Debe completar todos los datos</p>
+                    <p class="item" id="error1">* Debe completar el cuadro</p>
+                    <p class="item" id="error2">* Debe ingresar un peso válido</p>
                     <button class="item" id="calcular">Calcular</button>
-                    <p class="item resultado" id="flu">71cc/h</p>
-                    <p class="item resultado" id="man">m+m/2 : 105cc/h</p>
+                    <div id="contenedor-resultado">
+                        <div id="resultado-texto">
+                            <p class="item resultado" id="VDiario">Vol. Diario:</p>
+                            <p class="item resultado" id="Mant">Mant.:</p>
+                            <p class="item resultado" id="MantM">m+m/2:</p>
+                        </div>
+                        <div id="resultado-numero1">
+                            <p class="item resultado" id="SC1500">SC*1500</p>
+                            <p class="item resultado" id="RtaVD1">cc</p>
+                            <p class="item resultado" id="RtaM1">cc/hr</p>
+                            <p class="item resultado" id="RtaMM1">m+m/2</p>
+                        </div>
+                        <div id="resultado-numero2">
+                            <p class="item resultado" id="SC2000">SC*2000</p>
+                            <p class="item resultado" id="RtaVD2">cc</p>
+                            <p class="item resultado" id="RtaM2">cc/hr</p>
+                            <p class="item resultado" id="RtaMM2">m+m/2</p>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div id="detalle">
                 <div class="contenido">
                     <h1>¿Cómo se calcula?</h1>
-                    <ul>
-                        <li>De 0kg hasta 10kg, se multiplica 100cc por cada kg.</li>
-                        <li>Mayor a 10kg hasta 20kg, se multiplica 50cc por cada kg.</li>
-                        <li>Mayor a 20kg hasta 30kg, se multiplica 20cc por cada kg.</li>
-                    </ul>
+                    <h2 id="HS-title">Método de Holliday-Segar</h2>
+                    <div class="lista" id="HS-list">
+                        <ul>
+                            <li>De 0kg hasta 10kg, se multiplica 100cc por cada kg.</li>
+                            <li>Mayor a 10kg hasta 20kg, se multiplica 50cc por cada kg.</li>
+                            <li>Mayor a 20kg hasta 30kg, se multiplica 20cc por cada kg.</li>
+                        </ul>
+                    </div>
+                    <h2 id="SC-title">Método de Superficie Corporal</h2>
+                    <div class="lista" id="SC-list">
+                        <ul>
+                            <li>Se aplica la fórmula SC = ((Peso * 4) + 7) / (Peso + 90)</li>
+                            <li>El resultado se multiplica por 1500 y por 2000.</li>
+                            <li>Se elige el resultado más conveniente.</li>
+                        </ul>
+                    </div>
+                    <h2 id="Nota-title">Observaciones</h2>
+                    <div class="lista" id="Nota-list">
+                        <ul>
+                            <li>Máxima dosis de 2400mL al día.</li>
+                            <li>1 Centímetro Cúbico [cc] = 1 Mililitro [mL].</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
